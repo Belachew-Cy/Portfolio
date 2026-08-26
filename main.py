@@ -38,8 +38,10 @@ login_manager.init_app(app)
 
 @login_manager.user_loader
 def load_user(user_id):
-    return db.get_or_404(User, user_id)
-
+    try:
+        return db.session.get(User, int(user_id))
+    except Exception:
+        return None
 
 # For adding profile images to the comment section
 gravatar = Gravatar(app,
@@ -108,16 +110,12 @@ with app.app_context():
     db.create_all()
 
 
-# Create an admin-only decorator
 def admin_only(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        # If id is not 1 then return abort with 403 error
-        if current_user.id != 1:
+        if not current_user.is_authenticated or current_user.id != 1:
             return abort(403)
-        # Otherwise continue with the route function
         return f(*args, **kwargs)
-
     return decorated_function
 
 
