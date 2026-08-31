@@ -1,65 +1,91 @@
-{% include "header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio · Home</title>
+    <link rel="icon" href="./img/Belachew-profile.jpg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./CSS/style.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- ======== NAVIGATION ======== -->
+        <header class="navbar">
+            <div class="logo">
+                <i class="fas fa-crown"></i> Port.
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="./Work.html">Work</a>
+                <a href="./About.html">About</a>
+                <a href="./Contact.html">Contact</a>
+            </nav>
+        </header>
 
-<!-- Page Header-->
-<header
-  class="masthead"
-  style="background-image: url('../static/assets/img/Belachew.png')"
->
-  <div class="container position-relative px-4 px-lg-5">
-    <div class="row gx-4 gx-lg-5 justify-content-center">
-      <div class="col-md-10 col-lg-8 col-xl-7">
-        <div class="site-heading">
-          <h1>Belachew's Blog</h1>
-          <span class="subheading">A collection of random musings.</span>
+        <!-- ======== HERO SECTION ======== -->
+        <div class="hero">
+            <div class="hero-content">
+                <span class="hero-badge"><i class="fas fa-code"></i> Available for freelance</span>
+                <h1>
+                    Crafting <span class="text-gradient">digital stories</span> <br>with code & design
+                </h1>
+                <p>
+                    Hi, I'm Belachew — a creative developer focused on building 
+                    expressive, user-friendly interfaces. Welcome to my portfolio.
+                </p>
+                <div class="hero-buttons">
+                    <a href="work.html" class="btn btn-primary"><i class="fas fa-paper-plane"></i> View projects</a>
+                    <a href="contact.html" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact me</a>
+                </div>
+            </div>
+            <div  class="hero-avatar">
+                <img src="./img/Belachew-profile.jpg" alt="Belachew" style="width: 260px; height:300px; object-fit: cover; border-radius: 150px;">
+            </div>
         </div>
-      </div>
+
+        <!-- ======== SKILLS SECTION ======== -->
+        <div class="skills-section">
+            <h2>✦ My <span class="gradient-text">toolkit</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <h3>React & Next</h3>
+                    <p>Components & performance</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-node-js"></i>
+                    <h3>Node.js</h3>
+                    <p>APIs & backend logic</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-pencil-ruler"></i>
+                    <h3>UI/UX</h3>
+                    <p>Figma, prototyping</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL & NoSQL</h3>
+                    <p>Data modeling</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</header>
-<!-- Main Content-->
-<div class="container px-4 px-lg-5">
-  <div class="row gx-4 gx-lg-5 justify-content-center">
-    <div class="col-md-10 col-lg-8 col-xl-7">
-      <!-- Post preview-->
-      {% for post in all_posts %}
-      <div class="post-preview">
-        <a href="{{ url_for('show_post', post_id=post.id) }}">
-          <h2 class="post-title">{{ post.title }}</h2>
-          <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-        </a>
-        <p class="post-meta">
-          Posted by
-          <!-- post.author.name is now a User object -->
-          <a href="#">{{post.author.name}}</a>
-          on {{post.date}}
-          <!-- Only show delete button if user id is 1 (admin user) -->
-          {% if current_user.id == 1: %}
-          <a href="{{url_for('delete_post', post_id=post.id) }}">✘</a>
-          {% endif %}
-        </p>
-      </div>
-      <!-- Divider-->
-      <hr class="my-4" />
-      {% endfor %}
 
-      <!-- New Post -->
-      <!-- Only show Create Post button if user id is 1 (admin user) -->
-      {% if current_user.id == 1: %}
-      <div class="d-flex justify-content-end mb-4">
-        <a
-          class="btn btn-primary float-right"
-          href="{{url_for('add_new_post')}}"
-          >Create New Post</a
-        >
-      </div>
-      {% endif %}
+    <!-- ======== FOOTER ======== -->
+    <footer>
+        <div class="social-links">
+             <a href="https://github.com/Belachew-Cy" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+             <a href="https://www.linkedin.com/in/belachew-cyber" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+             <a href="https://x.com/Belachew2153" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+           </div>
+        <p>Copyright © 2026 Belachew<i class="fas fa-heart" style="color: #e2555c;"></i></p>
+    </footer>
 
-      <!-- Pager-->
-      <div class="d-flex justify-content-end mb-4">
-        <a class="btn btn-secondary text-uppercase" href="#!">Older Posts →</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-{% include "footer.html" %}
+    <script src="./js/script.js"></script>
+</body>
+</html>

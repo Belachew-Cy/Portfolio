@@ -1,49 +1,134 @@
-{% include "header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="icon" href="./img/Belachew-profile.jpg" type="image/x-icon" />
+    <!-- Google Font & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Your main stylesheet -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <script src="./js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- ======== NAVIGATION ======== -->
+        <header class="navbar">
+            <div class="logo">
+                <i class="fas fa-crown"></i> Port.
+            </div>
+            <nav class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="./Work.html">Work</a>
+                <a href="./About.html">About</a>
+                <a href="./Contact.html" class="active">Contact</a>
+            </nav>
+        </header>
 
-<!-- Page Header-->
-<header
-  class="masthead"
-  style="background-image: url('../static/assets/img/Belachew.png')"
->
-  <div class="container position-relative px-4 px-lg-5">
-    <div class="row gx-4 gx-lg-5 justify-content-center">
-      <div class="col-md-10 col-lg-8 col-xl-7">
-        <div class="page-heading">
-          <h1>About Me</h1>
-          <span class="subheading">This is what I do.</span>
+        <!-- ======== PAGE HEADER ======== -->
+        <div class="page-header">
+            <h1>About <span>me</span></h1>
+            <p>Passionate developer & creative problem solver</p>
         </div>
-      </div>
-    </div>
-  </div>
-</header>
-<!-- Main Content-->
-<main class="mb-4">
-  <div class="container px-4 px-lg-5">
-    <div class="row gx-4 gx-lg-5 justify-content-center">
-      <div class="col-md-10 col-lg-8 col-xl-7">
-        <p>
-            I have  a Bachelor of Science (B.Sc.) in <b>Computer Science from Injibara University,
-            completed June 2022, with a GPA of 3.82</b>. <i>His academic background,
-            combined with professional training and certifications in cybersecurity, networking, and information security,
-            has provided him with a strong foundation in both technical and security-related areas.<i>
-        </p>
-        <p>
-         I am an Information Security professional with hands-on experience in SAP Security,
-            SAP GRC (PC, RM, AM, and IAG), SAP S/4HANA, Active Directory, and Network Security.
-            I have been working as an Information Security Analyst I at Ethiopian Electric Power since
-            August 2023, where I focus on protecting enterprise systems, managing access and authorizations,
-            conducting risk assessments, and supporting security and compliance activities.
-        </p>
-        <p>
-          My technical skills include SAP Security, SAP GRC, SAP S/4HANA, Active Directory,
-            ethical hacking, vulnerability assessment, penetration testing, network security,
-            Python programming, Linux, Kali Linux, Metasploit, Wireshark, Nmap, ZMap, VMware,
-            and VirtualBox. I am committed to continuously developing my cybersecurity knowledge and applying my
-            technical skills to strengthen organizational security and protect critical information systems.
-        </p>
-      </div>
-    </div>
-  </div>
-</main>
 
-{% include "footer.html" %}
+        <!-- ======== ABOUT CONTENT ======== -->
+        <div class="about-grid">
+            <!-- LEFT: Profile Image & Info -->
+            <div class="about-image">
+                <div  class="hero-avatar">
+                <img src="./img/Belachew-profile.jpg" alt="Belachew" style="width: 260px; height:300px; object-fit: cover; border-radius: 150px;">
+            </div>
+                <div class="profile-info">
+                    <h3>Belachew</h3>
+                    <p class="title">Full-Stack Developer<br>Cybersecurity Analyst II</p>
+                    <div class="profile-details">
+                        <span><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</span>
+                        <span><i class="fas fa-calendar-alt"></i> 3+ years experience</span>
+                        <span><i class="fas fa-code"></i> 5+ projects completed</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: About Text -->
+            <div class="about-text">
+                <h2>Building Secure Digital Experiences That Matter</h2>
+                <p>
+                    II'm an Information Security Analyst and Software Developer with over 3 years of experience in cybersecurity at Ethiopian Electric Power (EEP). My expertise includes SAP Security, SAP GRC, SAP IAG, SAP Process Control, Active Directory, Firewall and Network Security, vulnerability assessment, and information security.
+                </p>
+                <p>
+                    I combine security knowledge with clean code and practical problem-solving to build secure, reliable, and user-focused solutions. I am passionate about using technology to solve real-world challenges, strengthen information security, and support digital transformation.
+                </p>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Projects Delivered</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                </div>
+
+                <div class="about-skills">
+                    <h3>My Skills</h3>
+                    <div class="skill-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Django</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">SAP GRC</span>
+                        <span class="tag">SAP Security</span>
+                        <span class="tag">SAP IAG</span>
+                        <span class="tag">SAP Admin</span>
+                        <span class="tag">Firewall</span>
+                        <span class="tag">Active Directory Admin</span>
+
+                    </div>
+                </div>
+
+                <div class="about-cta">
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Let's work together
+                    </a>
+                    <a href="#" class="btn btn-outline">
+                        <i class="fas fa-file-alt"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======== FOOTER ======== -->
+    <footer>
+        <div class="social-links">
+             <a href="https://github.com/Belachew-Cy" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+             <a href="https://www.linkedin.com/in/belachew-cyber" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+             <a href="https://x.com/Belachew2153" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+           </div>
+        <p>Copyright © 2026 Belachew<i class="fas fa-heart" style="color: #e2555c;"></i></p>
+    </footer>
+</body>
+</html>
