@@ -1,0 +1,8 @@
+{
+  "users": {
+    "Belachew": {
+      "email": "yohanakelkay@gmail.com",
+      "password_hash": "scrypt:32768:8:1$NArWu2mYAzNGCFKs$f7444fcbafb3f6a3fcfddab2a890019ce9210ae06036ec6b92af3eb5f20507df524f60d1b42a3976ba61c93794039d7009edce33cad7f5b12296334b8975897c"
+    }
+  }
+}
